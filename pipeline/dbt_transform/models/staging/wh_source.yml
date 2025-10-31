@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: public
+    database: wh_osc
+    schema: public
+    tables:
+      - name: sales_order
+      - name: delivery_order
+      - name: customers
+      - name: delivery_man
+      - name: deliveryproof
+      - name: expedition
+      - name: license_plate
+      - name: office_address
+      - name: packinglist
+      - name: transferstatus

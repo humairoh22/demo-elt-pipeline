@@ -1,0 +1,1 @@
+select * from {{ source("public", "license_plate")}}

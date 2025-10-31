@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  dwh:
+    image: postgres:latest
+    container_name: dwh_demo
+    restart: always
+    environment:
+      - POSTGRES_DB=${DWH_POSTGRES_DB}
+      - POSTGRES_USER=${DWH_POSTGRES_USER}
+      - POSTGRES_PASSWORD=${DWH_POSTGRES_PASSWORD}
+      - POSTGRES_HOST=${DWH_POSTGRES_HOST}
+    ports:
+      - ${DWH_POSTGRES_PORT}:5432
+    volumes:
+      - dwh_volume:/var/lib/postgresql/data
+      - ./helper/dwh_init/:/docker-entrypoint-initdb.d
+
+volumes:
+  dwh_volume:
+
+

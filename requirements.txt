@@ -1,0 +1,6 @@
+dbt-postgres==1.5.8
+luigi==3.6.0
+pandas==2.0.3
+PyMySQL==1.1.1
+psycopg2-binary==2.9.10
+sqlalchemy==2.0.42
